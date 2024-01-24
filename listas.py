@@ -10,6 +10,8 @@ for lista in mi_lista:
 nombres = ['Juan', 'Karla', 'Ricardo', 'Maria']
 #Imprimir una lista
 print(nombres)
+
+#LISTAS Part 2
 #acceder a los elmentos de una lista
 print(nombres[0])
 print(nombres[1])
@@ -31,3 +33,20 @@ for nombre in nombres:
     print(nombre)
 else:
     print("No exiten mas nombres en la lista")
+
+#LISTAS Part 3
+#Preguntar el largo de una lista
+print(len(nombres))
+#agregar un elemento
+#El operador punto nos permite acceder a los metodos o funciones de una lista
+nombres.append('Lorenzo')
+print(nombres)
+#insertar elemento en un indice en especifico
+nombres.insert(1, 'Octavio')
+print(nombres)
+#remover un elemento, se utiliza para eliminar la primera aparición de un elemento específico en la lista.
+nombres.remove('Octavio')
+print(nombres)
+#elimina y devuelve el elemento en la posicion dada, Si no se porporciona una posicion, elimina y duevuelve el ultimo elemento
+nombres.pop(4)
+print(nombres)
