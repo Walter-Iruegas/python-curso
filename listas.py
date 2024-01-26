@@ -39,6 +39,7 @@ else:
 print(len(nombres))
 #agregar un elemento
 #El operador punto nos permite acceder a los metodos o funciones de una lista
+#append se utiliza para agregar un elemento al final de una lista.
 nombres.append('Lorenzo')
 print(nombres)
 #insertar elemento en un indice en especifico
@@ -49,4 +50,11 @@ nombres.remove('Octavio')
 print(nombres)
 #elimina y devuelve el elemento en la posicion dada, Si no se porporciona una posicion, elimina y duevuelve el ultimo elemento
 nombres.pop(4)
+print(nombres)
+#eliminar un indice, especicando un indice
+del nombres[0]
+print(nombres)
+#Limpiar la lista
+#borrar la lista por completo
+nombres.clear()
 print(nombres)
