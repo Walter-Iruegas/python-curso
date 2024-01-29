@@ -14,3 +14,24 @@
 #del midiccionario["clave1"] # Eliminar un par clave-valor
 #"clave1" in midiccionario # Verificar existencia
 
+#dict (key, value)
+
+diccionario = {
+    'IDE':'Integrated Development Enviroment',
+    'OOP':'Object Oriented Programming',
+    'DBMS':'Database Management System'
+}
+
+print(diccionario)
+
+#largo
+print(len(diccionario))
+
+#no existen indices en le diccionario, par apoder acceder a un elemento (key)
+print(diccionario['IDE'])
+
+#otra fomra de recuperar un elemento unando .get()
+print(diccionario.get('OOP'))
+
+#modificando elementos
+diccionario['IDE'] = 'integrated deleopment environment'
