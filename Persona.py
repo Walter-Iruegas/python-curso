@@ -1,4 +1,4 @@
-# Definir una clase
+# 1Definir una clase
 class Persona:
     # Metodo inicializador
     def __init__(self):  # self una refenrencia del objeto, solo se declara no se pasa ningun valor
