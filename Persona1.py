@@ -2,11 +2,15 @@
 class Persona1:
     # los comun es asar valores al momento de rear los objetos
     # Un constructoe es una metodo para poder crear un objeto
-    def __init__(self, nombre, apellido, edad):
+    # Robusteciendo el metodo init
+    # Argumentos variables agregar tupla(*args) y diccionario **kwargs // no tiene que ser el mismo nombre
+    def __init__(self, nombre, apellido, edad, *args, **kwargs):
         # Atributos  = parametros
         self.nombre = nombre
         self.apellido = apellido
         self.edad = edad
+        self.args = args
+        self.kwargs = kwargs
         # Metodos d instancia
         # Self se agrega a todo los metodos de intancia, es obligatorio ponerlo
         # Al estar dentro de la clase en la deficion hay usar el paramtro self para acceder a los atributos
@@ -15,10 +19,11 @@ class Persona1:
         print(f'Persona: {self.nombre} {self.apellido} {self.edad}')
 
 
-persona = Persona1('Walter', 'Iruegas', 32)
+# Para pasar los argumentos primero son las tuplas y despues los diccionaros
+persona = Persona1('Walter', 'Iruegas', 32, '44444566', 2, 4, m='manzana', p='pera')
 print(f'Metodo Objeto Persona 1 : {persona.nombre} {persona.apellido} {persona.edad}')
 
-#Agregar un uevo atributo a un ibjeto, no se comparte con otros
+# Agregar un nuevo atributo a un ibjeto, no se comparte con otros
 persona.telefono = '3456323'
 print(persona.telefono)
 
@@ -29,12 +34,13 @@ persona.mostrar_detalle()
 persona.nombre = "Juan Carlos"
 persona.apellido = "Juarez"
 persona.edad = 40
-print(f'Modificado Objeto Persona 1 : {persona.nombre} {persona.apellido} {persona.edad}')
+print(
+    f'Modificado Objeto Persona 1 : {persona.nombre} {persona.apellido} {persona.edad} {persona.args} {persona.kwargs}')
 
 # Llamar al metodo
 persona.mostrar_detalle()
 
-#otra fomra de llamar al meotodo
+# otra fomra de llamar al meotodo
 Persona1.mostrar_detalle(persona)
 
 # Creacion de mas objetos
@@ -63,4 +69,3 @@ print(f'Modificado Objeto Persona 2 : {persona2.nombre} {persona2.apellido} {per
 # Cuando mandamos a llamar el un metodo se puede utilizar directamente el nombre de la clase
 # Pero ahora si hay que pasar un argumento posicional (es otra fomra, no muy comun)
 print(f'Llamada de objeto por el nombre de la clase {Persona1.mostrar_detalle(persona2)}')
-
